@@ -129,7 +129,7 @@ const Nav = ({ playlistStatus, setPlaylistStatus, setSongs }) => {
         </div>
         <ul style={styles.navigation} className="navigation">
           <li style={styles.parent} className="parent">
-            <button className="button" onClick={refreshPage}>
+            <button className="button" onClick={refreshPage} style={{ color: "#fff" }}>
               Home
             </button>
           </li>
