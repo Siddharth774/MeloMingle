@@ -51,7 +51,7 @@ const App = () => {
         const savePlaybackState = () => {
             localStorage.setItem('lastPlaybackPosition', audioRef.current.currentTime);
         };
-
+        const currentAudioRef = audioRef.current;
         audioRef.current.addEventListener('timeupdate', savePlaybackState);
 
         return () => {
