@@ -21,6 +21,10 @@ const Nav = ({ playlistStatus, setPlaylistStatus, setSongs }) => {
     }
   };
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   const styles = {
     body: {
       fontFamily: "Roboto, sans-serif",
@@ -109,34 +113,10 @@ const Nav = ({ playlistStatus, setPlaylistStatus, setSongs }) => {
         transform: "translate(-50%, -50%)",
       }}
     >
-      {/* <div className="left-section">
-        <h1 className={playlistStatus ? "h1-mobile" : "h1"}>
-          IOTReady Audio Player
-        </h1>
-      </div>
-      <div className="right-section">
-        <button
-          className="button"
-          onClick={() => setPlaylistStatus(!playlistStatus)}
-        >
-          Playlist
-        </button>
-        <input
-          ref={fileInputRef}
-          className="file-input"
-          type="file"
-          accept=".mp3"
-          onChange={handleFileUpload}
-          style={{ display: "none" }} // Hide the file input
-        />
-        <button className="button" onClick={() => fileInputRef.current.click()}>
-          Add Song
-        </button>
-      </div> */}
       <nav style={styles.navigationWrapper} className="navigationWrapper">
         <div style={styles.logoWrapper} className="logoWrapper">
           <span style={styles.logo} className="logo">
-            {/* meloMingle */}
+            
             <img
               src={logo}
               alt="No logo found"
@@ -149,10 +129,11 @@ const Nav = ({ playlistStatus, setPlaylistStatus, setSongs }) => {
         </div>
         <ul style={styles.navigation} className="navigation">
           <li style={styles.parent} className="parent">
-            <button className="button">
-              <a style={styles.link} className="link" href="#">
-                Home
-              </a>
+            <button className="button" onClick={refreshPage}>
+              // <a style={styles.link}  onClick={handleClick} className="link" href="#">
+              //   Home
+              // </a>
+              Home
             </button>
           </li>
           <li style={styles.parent} className="parent">
